@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="checkout">
+  <header>
+    <h1>Checkout</h1>
+  </header>
+
+  <main>
+    <section
+      id="checkout-summary"
+      class="checkout-summary"
+      aria-label="Order summary"
+    ></section>
+
+    <p id="message" aria-live="polite"></p>
+
+    <form id="checkout-form" hidden>
+      <p>All fields are required.</p>
+
+      <fieldset>
+        <legend>Customer information</legend>
+
+        <label for="full-name">
+          Full name
+        </label>
+
+        <input
+          id="full-name"
+          name="full_name"
+          type="text"
+          maxlength="100"
+          autocomplete="name"
+          required
+        >
+
+        <label for="email">
+          Email address
+        </label>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>Delivery address</legend>
+
+        <label for="address-line">
+          Address line
+        </label>
+
+        <input
+          id="address-line"
+          name="address_line"
+          type="text"
+          maxlength="200"
+          autocomplete="street-address"
+          required
+        >
+
+        <label for="city">
+          Town or city
+        </label>
+
+        <input
+          id="city"
+          name="city"
+          type="text"
+          maxlength="100"
+          autocomplete="address-level2"
+          required
+        >
+
+        <label for="postcode">
+          Postal code
+        </label>
+
+        <input
+          id="postcode"
+          name="postcode"
+          type="text"
+          maxlength="20"
+          autocomplete="postal-code"
+          required
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment information</legend>
+
+        <label for="cardholder-name">
+          Cardholder name
+        </label>
+
+        <input
+          id="cardholder-name"
+          name="cardholder_name"
+          type="text"
+          maxlength="100"
+          autocomplete="cc-name"
+          required
+        >
+
+        <label for="card-number">
+          Card number
+        </label>
+
+        <input
+          id="card-number"
+          name="card_number"
+          type="text"
+          minlength="12"
+          maxlength="23"
+          inputmode="numeric"
+          autocomplete="cc-number"
+          aria-describedby="payment-help"
+          required
+        >
+
+        <label for="expiry-date">
+          Expiry date (MM/YY)
+        </label>
+
+        <input
+          id="expiry-date"
+          name="expiry_date"
+          type="text"
+          pattern="\d{2}/\d{2}"
+          placeholder="12/30"
+          autocomplete="cc-exp"
+          required
+        >
+
+        <label for="security-code">
+          CVV
+        </label>
+
+        <input
+          id="security-code"
+          name="security_code"
+          type="text"
+          pattern="\d{3,4}"
+          inputmode="numeric"
+          autocomplete="cc-csc"
+          required
+        >
+      </fieldset>
+
+      <div class="actions">
+        <a
+          id="back-link"
+          class="button"
+          href="index.html"
+        >
+          Back to product
+        </a>
+
+        <button
+          id="submit-order"
+          type="submit"
+        >
+          Place order
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>Study checkout demo</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

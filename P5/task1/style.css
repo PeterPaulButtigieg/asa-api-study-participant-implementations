@@ -1,0 +1,144 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+background: #f5f5f5;
+color: #222;
+}
+
+header {
+background: white;
+border-bottom: 1px solid #ddd;
+padding: 14px 22px;
+}
+
+header a {
+color: #222;
+text-decoration: none;
+font-weight: bold;
+}
+
+main {
+max-width: 950px;
+margin: 25px auto;
+padding: 0 16px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+gap: 18px;
+}
+
+.card,
+.box {
+background: white;
+border: 1px solid #ddd;
+padding: 16px;
+border-radius: 4px;
+}
+
+.card img {
+width: 100%;
+height: 180px;
+object-fit: contain;
+}
+
+.product-layout {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 25px;
+}
+
+.product-layout img {
+max-width: 100%;
+background: white;
+}
+
+button,
+.button {
+background: #1d65a6;
+color: white;
+border: 0;
+padding: 10px 15px;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+}
+
+button:disabled {
+background: #999;
+cursor: not-allowed;
+}
+
+label {
+display: block;
+margin-top: 10px;
+font-weight: bold;
+}
+
+input,
+select {
+box-sizing: border-box;
+width: 100%;
+padding: 9px;
+margin-top: 4px;
+border: 1px solid #aaa;
+}
+
+fieldset {
+margin: 16px 0;
+border: 1px solid #ccc;
+}
+
+.error {
+background: #ffe2e2;
+padding: 10px;
+margin: 12px 0;
+}
+
+.success {
+background: #e4f6df;
+padding: 12px;
+}
+
+.summary {
+margin-bottom: 18px;
+}
+
+ul {
+padding-left: 20px;
+}
+
+.price {
+font-size: 20px;
+font-weight: bold;
+}
+
+.muted {
+color: #666;
+font-size: 14px;
+}
+
+.order-item {
+border-top: 1px solid #ddd;
+padding: 10px 0;
+}
+
+#products .card h2 {
+margin-top: 7px;
+}
+
+.card p {
+margin-bottom: 12px;
+}
+
+form button {
+margin-top: 5px;
+}
+
+
+main {
+margin-top: 15px;
+}
+}
+

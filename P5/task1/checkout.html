@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Checkout</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a href="index.html">Small Shop</a></header>
+<main>
+ <h1>Checkout</h1>
+ <div id="cart" class="box summary">Loading cart...</div>
+ <div id="error"></div>
+ <form id="checkoutForm" class="box">
+  <fieldset>
+   <legend>Customer information</legend>
+   <label>Full name<input id="fullName" maxlength="100" required></label>
+   <label>Email<input id="email" type="email" required></label>
+  </fieldset>
+  <fieldset>
+   <legend>Delivery address</legend>
+   <label>Address line<input id="address" maxlength="200" required></label>
+   <label>Town or city<input id="city" maxlength="100" required></label>
+   <label>Postal code<input id="postcode" maxlength="20" required></label>
+  </fieldset>
+  <fieldset>
+   <legend>Payment information</legend>
+   <label>Cardholder name<input id="cardName" maxlength="100" required></label>
+   <label>Card number<input id="cardNumber" minlength="12" maxlength="23" required></label>
+   <label>Expiry date<input id="expiry" placeholder="MM/YY" pattern="\d{2}/\d{2}" required></label>
+   <label>CVV<input id="cvv" pattern="\d{3,4}" required></label>
+  </fieldset>
+  <button id="placeOrder" type="submit">Place order</button>
+ </form>
+</main>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="module" src="checkout.js"></script>
+</body>
+</html>

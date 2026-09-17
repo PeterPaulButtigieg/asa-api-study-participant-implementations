@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Checkout</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a href="index.html">Simple Store</a></header>
+<main>
+ <h1>Checkout</h1>
+ <section id="cart" class="panel" aria-labelledby="cartHeading">
+  <h2 id="cartHeading">Order summary</h2><p>Loading...</p>
+ </section>
+ <div id="checkoutStatus" class="status" role="status" aria-live="polite"></div>
+
+ <form id="checkoutForm" class="panel">
+  <fieldset>
+   <legend>Customer details</legend>
+   <label for="fullName">Full name</label><input id="fullName" maxlength="100" required>
+   <label for="email">Email address</label><input id="email" type="email" required>
+  </fieldset>
+  <fieldset>
+   <legend>Delivery address</legend>
+   <label for="address">Address line</label><input id="address" maxlength="200" required>
+   <label for="city">Town or city</label><input id="city" maxlength="100" required>
+   <label for="postcode">Postal code</label><input id="postcode" maxlength="20" required>
+  </fieldset>
+  <fieldset>
+   <legend>Payment</legend>
+   <label for="cardName">Cardholder name</label><input id="cardName" maxlength="100" required>
+   <label for="cardNumber">Card number</label><input id="cardNumber" minlength="12" maxlength="23" required>
+   <label for="expiry">Expiry date</label><input id="expiry" placeholder="MM/YY" pattern="\d{2}/\d{2}" required>
+   <label for="cvv">CVV</label><input id="cvv" inputmode="numeric" pattern="\d{3,4}" required>
+  </fieldset>
+  <button id="placeOrder" type="submit">Place order</button>
+ </form>
+</main>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="module" src="checkout.js"></script>
+</body>
+</html>
