@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #edf0ec;
+  color: #292929;
+}
+
+.page {
+  width: 91%;
+  margin: auto;
+  max-width: 920px;
+}
+
+header {
+  background: #88a99d;
+  margin-bottom: 28px;
+  padding: 18px 10px;
+}
+
+header a {
+  font-size: 26px;
+  font-weight: bold;
+  color: #202020;
+}
+
+.products {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product {
+  padding: 13px;
+  border: 1px solid #9b9b9b;
+  background: white;
+}
+
+.product img {
+  width: 100%;
+  height: 155px;
+  object-fit: contain;
+}
+
+.product h2 {
+  margin-bottom: 7px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+input {
+  width: 295px;
+  padding: 8px;
+  display: block;
+  margin: 6px 0 11px;
+}
+
+button {
+  border: 0;
+  color: white;
+  background: #52796f;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+
+.error {
+  color: #921f1f;
+  font-weight: bold;
+}
+
+.hint {
+  padding: 7px;
+  width: fit-content;
+  background: #fff0ae;
+}
+
+.success {
+  padding: 9px;
+  background: #d9ead3;
+  border-left: 4px solid #52796f;
+}
+
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid #213f78;
+  outline-offset: 2px;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+@media (max-width: 650px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  input {
+    max-width: 90%;
+  }
+}
